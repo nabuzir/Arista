@@ -1,0 +1,22 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Use Vagrant's default insecure key
+  config.ssh.insert_key = false
+  # Set timeout to 4 mins
+  config.vm.boot_timeout = 240
+  # Disable default host <-> guest synced folder
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  # Set guest OS type to disable autodetection
+  config.vm.guest = :tinycore
+  # Disable port forwarding for SSH
+  config.vm.network :forwarded_port, guest: 22, host: 2200, id: "ssh", disabled: true
+
+  config.vm.provider :vmware_desktop do |v|
+    # https://www.vagrantup.com/docs/vmware/boxes.html#vmx-whitelisting
+    v.whitelist_verified = true
+    # https://www.vagrantup.com/docs/vmware/configuration.html#ssh_info_public
+    v.ssh_info_public = true
+  end
+end
