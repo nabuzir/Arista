@@ -2,10 +2,12 @@ A Packer template for creating an Arista vEOS-lab Vagrant box for the [VMware pr
 
 ## Prerequisites
 
-  1. [Arista account](https://www.arista.com/en/user-registration)
-  2. [Git](https://git-scm.com)
-  3. VMware [Fusion](https://www.vmware.com/products/fusion.html) or [Workstation](https://www.vmware.com/products/workstation-pro.html)
-  4. [Packer](https://packer.io)
+  * [Arista account](https://www.arista.com/en/user-registration)
+  * [Git](https://git-scm.com)
+  * VMware [Fusion](https://www.vmware.com/products/fusion.html) or [Workstation](https://www.vmware.com/products/workstation-pro.html)
+  * [Packer](https://packer.io)
+  * [Vagrant](https://vagrantup.com)
+  * [Vagrant VMware plugin](https://www.vagrantup.com/vmware/index.html)
 
 ## Steps
 
